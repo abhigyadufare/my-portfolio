@@ -16,7 +16,7 @@ const Greeting = () => {
   ];
 
   return (
-    <div className="min-h-screen flex justify-center items-center px-4">
+    <div className="min-h-screen flex justify-center items-center px-4 dark:bg-slate-950">
       <div className="text-4xl font-bold mx-auto text-neutral-600 dark:text-neutral-400 md:text-7xl">
         <FlipWords words={words} />
       </div>
