@@ -14,13 +14,13 @@ const LanguageLoader = () => {
 
   const greetings: Greeting[] = [
     { text: "Hello", language: "English" },
+    { text: "नमस्ते", language: "Hindi" },
     { text: "Hola", language: "Spanish" },
     { text: "Bonjour", language: "French" },
     { text: "Ciao", language: "Italian" },
     { text: "こんにちは", language: "Japanese" },
     { text: "안녕하세요", language: "Korean" },
     { text: "Hallo", language: "German" },
-    { text: "नमस्ते", language: "Hindi" },
     { text: "مرحبا", language: "Arabic" },
     { text: "你好", language: "Chinese" },
   ];
@@ -31,7 +31,7 @@ const LanguageLoader = () => {
       setCurrentLanguageIndex(
         (prevIndex) => (prevIndex + 1) % greetings.length
       );
-    }, 700);
+    }, 600);
 
     // Simulate app loading time
     const loadingTimeout = setTimeout(() => {
