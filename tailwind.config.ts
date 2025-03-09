@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import * as svgToDataUri from "mini-svg-data-uri";
+import svgToDataUri from "mini-svg-data-uri";
 // import * as colors from "tailwindcss/colors"
 // import { colors } from "tailwindcss/colors";
 
@@ -11,10 +11,9 @@ import * as svgToDataUri from "mini-svg-data-uri";
 // } = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
-  
   plugins: [
-    require("tailwindcss-animate"),
-    addVariablesForColors,
+    // require("tailwindcss-animate"),
+    // addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
         {
@@ -34,21 +33,21 @@ const config = {
             )}")`,
           }),
         },
-        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+        { values: theme("backgroundColor"), type: "color" }
       );
     },
   ],
 } satisfies Config;
 
-function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
+// function addVariablesForColors({ addBase, theme }: any) {
+//   let allColors = flattenColorPalette(theme("colors"));
+//   let newVars = Object.fromEntries(
+//     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+//   );
 
-  addBase({
-    ":root": newVars,
-  });
-}
+//   addBase({
+//     ":root": newVars,
+//   });
+// }
 
 export default config;
