@@ -2,7 +2,6 @@
 
 import Greeting from "@/components/Greeting";
 import Hero from "@/components/Hero";
-import LanguageLoader from "@/components/LanguageLoader";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -18,10 +17,9 @@ export default function Home() {
   return (
     <>
       {loading ? (
-        // <LanguageLoader />
         <Greeting />
       ) : (
-        <main className="relative bg-slate-950 flex justify-center items-center flex-col mx-auto overflow-hidden">
+        <main className="relative dark:bg-slate-950 flex justify-center items-center flex-col mx-auto overflow-hidden">
           <div className="w-full max-w-7xl">
           <Hero />
            
