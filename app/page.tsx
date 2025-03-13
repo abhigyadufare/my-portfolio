@@ -4,6 +4,7 @@ import Greeting from "@/components/Greeting";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/floating-navbar";
+import { navItems } from "@/data";
 import { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 
@@ -25,7 +26,7 @@ export default function Home() {
         <main className="relative dark:bg-slate-950 flex justify-center items-center flex-col mx-auto overflow-hidden">
           <div className="w-full max-w-7xl">
             <FloatingNav
-              navItems={[{ name: "Home", link: "/", icon: <FaHome /> }]}
+              navItems={navItems}
             />
               <Hero />
               <Grid />
