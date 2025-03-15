@@ -12,7 +12,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-rows-7 lg:gap-8 gap-4 w-full py-20 mx-auto ",
+        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto w-full py-20",
         className
       )}
     >
@@ -43,7 +43,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-950 bg-gradient-to-r from-gray-100 to-white justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 p-4 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-950 bg-gradient-to-r from-gray-100 to-white",
         className
       )}
     >
@@ -89,6 +89,32 @@ export const BentoGridItem = ({
           </div>
         </div>
         {id === 2 && <GlobeDemo />}
+        {id === 3 && (
+          <div className="flex gap-1 lg:gap-5 w-fit absolute -top-2 -right-3 lg:-right-2">
+            <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+              {["", "ReactJs", "NextJs", "Tailwindcss", "Liquid"].map(
+                (skill) => (
+                  <span
+                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50  lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    key={skill}
+                  >
+                    {skill}
+                  </span>
+                )
+              )}
+            </div>
+            <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+              {["MongoDB", "Express", "NodeJs", "Redux", ""].map((skill) => (
+                <span
+                  className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50  lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  key={skill}
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
