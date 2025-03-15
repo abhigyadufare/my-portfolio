@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
+import { GridGlobe } from "./grid-globe";
 
 export const BentoGrid = ({
   className,
@@ -57,7 +58,7 @@ export const BentoGridItem = ({
           )}
         </div>
         <div
-          className={`absolute right-0 bottom-5 ${
+          className={`absolute right-0 -bottom-5 ${
             id === 5 && "w-full opacity-80"
           }`}
         >
@@ -77,7 +78,7 @@ export const BentoGridItem = ({
         <div
           className={cn(
             titleClassName,
-            "group-hover/bento:translate-x-2 transition duration-200 md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+            "group-hover/bento:translate-x-4 transition duration-500 md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
           <div className="font-sans font-extralight z-10 text-[#c1c2d3] text-sm md:text-xs lg:text-base">
@@ -87,8 +88,8 @@ export const BentoGridItem = ({
             {title}
           </div>
         </div>
+        {id === 2 && <GridGlobe />}
       </div>
-      <div className="group-hover/bento:translate-x-2 transition duration-200"></div>
     </div>
   );
 };

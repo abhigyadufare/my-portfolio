@@ -23,7 +23,7 @@ export default function Home() {
       {loading ? (
         <Greeting />
       ) : (
-        <main className="relative dark:bg-slate-950 flex justify-center items-center flex-col mx-auto overflow-hidden">
+        <main className="relative dark:bg-slate-950 flex justify-center items-center flex-col mx-auto overflow-hidden px-5">
           <div className="w-full max-w-7xl">
             <FloatingNav
               navItems={navItems}
